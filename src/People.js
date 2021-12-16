@@ -9,6 +9,8 @@ export default class People extends Component {
 			name: "",
 			age: "",
 			gender: "",
+			notFound: null,
+			display: false,
 		};
 	}
 	fetchLocation = () => {
@@ -35,9 +37,13 @@ export default class People extends Component {
 		for (let each of allPerson) {
 			if (each.name.includes(currentPerson)) {
 				this.setState({
-					name: allPerson.name,
-					age: allPerson.age,
-					gender: allPerson.gender,
+					name: each.name,
+					age: each.age,
+					gender: each.gender,
+				});
+			} else {
+				this.setState({
+					notFound: "Not Found",
 				});
 			}
 		}
@@ -55,10 +61,10 @@ export default class People extends Component {
 						placeholder="Find Your Person"
 					/>
 					<button type="submit">Submit</button>
-					<div>Name:{this.state.currentPerson}</div>
-					<div>Age:17</div>
-					<div>Gender:Female</div>
-					<div>Not Found</div>
+					<div>Name:{this.state.name}</div>
+					<div>Age:{this.state.age}</div>
+					<div>Gender:{this.state.gender}</div>
+					<div>{this.state.notFound}</div>
 				</form>
 			</div>
 		);
