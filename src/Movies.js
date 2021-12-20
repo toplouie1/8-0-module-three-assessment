@@ -46,7 +46,7 @@ export default class Movies extends Component {
 					{mappingOver}
 				</select>
 				<div className="movies">
-					{this.state.display && (
+					{this.state.currentTitle && (
 						<div>
 							<h1>Title:{clickedSelect?.title}</h1>
 							<div>Release Date:{clickedSelect?.release_date}</div>
