@@ -6,7 +6,6 @@ export default class Movies extends Component {
 		this.state = {
 			allMovies: [],
 			currentTitle: null,
-			display: false,
 		};
 	}
 	fetchLocation = () => {
