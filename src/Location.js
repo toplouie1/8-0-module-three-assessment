@@ -41,13 +41,12 @@ export default class Location extends Component {
 		return (
 			<div>
 				<h1>List of Locations</h1>
-				{this.state.display && (
-					<button onClick={this.hideLocation}>Show Locations</button>
-				)}
-				{!this.state.display && (
-					<button onClick={this.fetchLocation}>Hide Locations</button>
-				)}
-				<div className="locations">{this.state.display ? null : allLoco}</div>
+				
+					<button onClick={this.toggleLocation}>
+					{this.state.display ? "Hide Locations" : "Show Locations"} //<- you can change the button's text content based on whether this.state.display is true or false.
+					</button>
+					
+				<ul className="locations">{this.state.display ? allLoco : null}</ul>
 			</div>
 		);
 	}
