@@ -14,7 +14,6 @@ export default class Location extends Component {
 			.then((data) => {
 				this.setState({
 					allLocations: data,
-					display: true,
 				});
 			});
 	};
