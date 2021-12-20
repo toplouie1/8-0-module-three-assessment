@@ -61,11 +61,12 @@ export default class People extends Component {
 						placeholder="Find Your Person"
 					/>
 					<button type="submit">Submit</button>
-					<div>Name:{this.state.name}</div>
-					<div>Age:{this.state.age}</div>
-					<div>Gender:{this.state.gender}</div>
-					<div>{this.state.notFound}</div>
 				</form>
+				
+				<div>Name:{this.state.name}</div>
+				<div>Age:{this.state.age}</div>
+				<div>Gender:{this.state.gender}</div>
+				<div>{this.state.notFound}</div>
 			</div>
 		);
 	}
